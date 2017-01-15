@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Тестове завдання</title> 
+</head>
+<body>
+  <h1>Тестове завдання</h1>
+  <h4>Client info</h2>
+  {% for key, value in info.items|slice:":5" %}
+  {{ key }} : {{ value }}</br>
+  {% endfor %}
+  <h4>Shops</h4>
+  {% for key, value in info.shops.items %}
+  {{ key }} : {{ value }}</br>
+  {% endfor %}
+  </br>
+  {{ data | safe }}
+  <h4>Товари, які виросли в продажах</h4>
+  {{ sale_up | safe }}
+  <h4>Товари, які впали в продажах</h4>
+  {{ sale_down | safe }}
+</body>
+</html>
